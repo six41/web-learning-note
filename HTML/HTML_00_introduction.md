@@ -52,6 +52,18 @@ HTML有一系列的**元素（elements）**组成，这些元素可以用来包�
 <p>访问我的<a href="https://github.com/six41" title="My Github Page" target="_blank">Github</a></p>
 ```
 
+### 空元素
+
+> void elements
+
+`<img src="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png">`
+
+一些元素只有一个标签，通常用来在此元素所在位置插入/嵌入一些东西。
+
+>空元素没有结束标签
+
+<img src="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png">
+
 ## HTML文档
 
 ```
@@ -85,6 +97,8 @@ HTML有一系列的**元素（elements）**组成，这些元素可以用来包�
 | "  | `&quot;` |
 | '  | `&apos;` |
 | &  | `&amp;` |
+
+使用案例
 
 ```
 <p>HTML 中用 <p> 来定义段落元素。</p>
