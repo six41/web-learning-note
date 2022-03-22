@@ -10,7 +10,9 @@ HTML有一系列的**元素（elements）**组成，这些元素可以用来包�
 
 ### 段落元素
 
-`<p>我养的布偶猫名字是英镑</p>`
+```HTML
+<p>我养的布偶猫名字是英镑</p>`
+```
 
 元素的主要部分有
 
@@ -28,7 +30,9 @@ HTML有一系列的**元素（elements）**组成，这些元素可以用来包�
 
 元素可以拥有属性。
 
-`<p class="editor-note">我养的英短名字是美元</p>`
+```HTML
+<p class="editor-note">我养的英短名字是美元</p>
+```
 
 属性包含元素的额外信息，这些信息不会出现在实际的内容中。
 
@@ -48,7 +52,7 @@ HTML有一系列的**元素（elements）**组成，这些元素可以用来包�
 - `title`: 标题title属性为超链接声明额外的信息，比如你将链接至的那个页面。例如：`title="My Github Page"`。当鼠标悬停在超链接上面时，这部分信息将以工具提示的形式显示。
 - `target`: 目标target属性用于指定链接如何呈现出来。例如，`target="_blank"`将在新标签页中显示链接。如果你希望在当前标签页显示链接，忽略这个属性即可。
 
-```
+```HTML
 <p>访问我的<a href="https://github.com/six41" title="My Github Page" target="_blank">Github</a></p>
 ```
 
@@ -56,7 +60,9 @@ HTML有一系列的**元素（elements）**组成，这些元素可以用来包�
 
 > void elements
 
-`<img src="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png">`
+```HTML
+<img src="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png">
+```
 
 一些元素只有一个标签，通常用来在此元素所在位置插入/嵌入一些东西。
 
@@ -66,7 +72,7 @@ HTML有一系列的**元素（elements）**组成，这些元素可以用来包�
 
 ## HTML文档
 
-```
+```HTML
 <!DOCTYPE html>
 <html>
   <head>
@@ -100,14 +106,14 @@ HTML有一系列的**元素（elements）**组成，这些元素可以用来包�
 
 使用案例
 
-```
+```HTML
 <p>HTML 中用 <p> 来定义段落元素。</p>
 <p>HTML 中用 &lt;p&gt; 来定义段落元素</p>
 ```
 
 ### HTML注释
 
-```
+```HTML
 <p>我在注释外</p>
 <!-- <p>我在注释内</p> -->
 ```

@@ -2,7 +2,7 @@
 
 ## 元数据
 
-```
+```HTML
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,11 +24,15 @@
 
 使用 CSS 让网页更加炫酷，使用JavaScript让网页有交互功能
 
-`<link rel="stylesheet" href="my-css-file.css">`
+```HTML
+<link rel="stylesheet" href="my-css-file.css">
+```
 
 &lt;link&gt; 元素经常位于文档的头部。这个link元素有2个属性，rel="stylesheet"表明这是文档的样式表，而 href包含了样式表文件的路径。
 
-`<script src="my-js-file.js"></script>`
+```HTML
+<script src="my-js-file.js"></script>`
+```
 
 &lt;script&gt;元素一般不放在文档头部，放在尾部（在 &lt;/body&gt;标签之前）会更好。
 
@@ -36,7 +40,9 @@
 
 ### 为HTML文档设定主语言
 
+```HTML
 `<html lang="zh-CN">`
+```
 
 **作用**
 
@@ -44,5 +50,6 @@
 
 将文档的分段设置为不同的语言。
 
+```HTML
 `<p>日语实例: <span lang="jp">ご飯が熱い。</span>.</p>`
-
+```
