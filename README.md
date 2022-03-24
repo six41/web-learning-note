@@ -7,3 +7,4 @@
 0. [introduction](./HTML/HTML_00_introduction.md)
 1. [&lt;head&gt;](./HTML/HTML_01_head.md)
 2. [text_fundamentals](./HTML/HTML_02_text_fundamentals.md)
+3. [hyperlinks](./HTML/HTML_03_hyperlinks.md)
