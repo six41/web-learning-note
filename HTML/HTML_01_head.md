@@ -1,4 +1,4 @@
-# &lt;head&gt;元素
+# HTML &lt;head&gt;元素
 
 ## 元数据
 
