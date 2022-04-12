@@ -87,4 +87,83 @@ background-position: 10px 20px,  top right;
 
 ## 渐变背景
 
+```css
+.a {
+  background-image: linear-gradient(105deg, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+}
+
+.b {
+  background-image: radial-gradient(circle, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+  background-size: 100px 50px;
+} 
+```
+
 ## 背景附加
+
+这是由background-attachment属性控制的，它可以接受以下值:
+
+- `scroll`: 使**元素的背景**在页面滚动时滚动。如果滚动了元素内容，则背景不会移动。实际上，背景被固定在页面的相同位置，所以它会随着页面的滚动而滚动。
+- `fixed`: 使元素的背景固定在视图端口上，这样当页面或元素内容滚动时，它就不会滚动。它将始终保持在屏幕上相同的位置。
+- `local`: 这个值是后来添加的(它只在Internet Explorer 9+中受支持，而其他的在IE4+中受支持)，因为滚动值相当混乱，在很多情况下并不能真正实现您想要的功能。局部值将背景固定在设置的元素上，因此当您滚动元素时，背景也随之滚动。
+
+background-attachment属性只有在有内容要滚动时才会有效果
+
+可以查看下面的示例
+
+[Background attachment example](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)
+
+# 边框
+
+使用一个简写属性在一行CSS中设置边框的颜色、宽度和样式。
+
+```css
+.box {
+  border: 1px solid black;
+} 
+```
+
+仅设置一个边
+
+```css
+.box {
+  border-top: 1px solid black;
+} 
+```
+
+这些简写的等价于：
+
+```css
+.box {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+} 
+```
+
+也可以使用更加细粒度的属性：
+
+```css
+.box {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: black;
+} 
+```
+
+## 圆角
+
+要使一个盒子的四个角都有10px的圆角半径：
+
+```css
+.box {
+  border-radius: 10px;
+} 
+```
+
+或使右上角的水平半径为1em，垂直半径为10％：
+
+```css
+.box {
+  border-top-right-radius: 1em 10%;
+} 
+```

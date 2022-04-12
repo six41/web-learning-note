@@ -12,7 +12,7 @@
 如果一个盒子对外显示为 `inline`，那么他的行为如下:
 
 - 盒子不会产生换行。
--  [`width`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/height) 属性将不起作用。
+- [`width`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width) 和 [`height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/height) 属性将不起作用。
 - 垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于 `inline` 状态的盒子推开。
 - 水平方向的内边距、外边距以及边框会被应用且会把其他处于 `inline` 状态的盒子推开。
 
@@ -42,8 +42,6 @@
   border: 5px solid black;
 }
 ```
-
-
 
 ### 替代盒模型
 
