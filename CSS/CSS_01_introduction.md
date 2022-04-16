@@ -245,7 +245,8 @@ p {
 
 支持在CSS中进行简单的计算
 
-```HTML
+```CSS
+
 .outer {
   border: 5px solid black;
 }
@@ -253,7 +254,9 @@ p {
 .box {
   padding: 10px;
   width: calc(90% - 30px);
-  <!--要求box的宽度是框宽的的90%再减去30像素-->
+  
+  /*要求box的宽度是框宽的的90%再减去30像素*/
+  
   background-color: rebeccapurple;
   color: white;
 }
@@ -261,7 +264,7 @@ p {
 
 ### rotate函数
 
-```HTML
+```CSS
 .box {
   margin: 30px;
   width: 100px;
@@ -283,7 +286,7 @@ at-rules是一些特殊的规则，为 CSS提供了一些关于如何表现的�
 
 允许使用**媒体查询**来应用CSS，仅当某些条件成立(例如，当屏幕分辨率高于某一数量，或屏幕宽度大于某一宽度时)。
 
-```HTML
+```CSS
 body {
   background-color: pink;
 }
@@ -327,4 +330,44 @@ background-image: url(bg-graphic.png);
 background-position: 10px 10px;
 background-repeat: repeat-x;
 background-attachment: fixed;
+```
+
+# CSS如何工作
+
+1. 浏览器载入HTML文件（比如从网络上获取）。
+2. 将HTML文件转化成一个DOM（Document Object Model），DOM是文件在计算机内存中的表现形式。
+3. 接下来，浏览器会拉取该HTML相关的大部分资源，比如嵌入到页面的图片、视频和CSS样式。
+4. JavaScript则会稍后进行处理。
+5. 浏览器拉取到CSS之后会进行解析，根据选择器的不同类型（比如element、class、id等等）把他们分到不同的“桶”中。浏览器基于它找到的不同的选择器，将不同的规则（基于选择器的规则，如元素选择器、类选择器、id选择器等）应用在对应的DOM的节点中，并添加节点依赖的样式（这个中间步骤称为渲染树）。
+6. 上述的规则应用于渲染树之后，渲染树会依照应该出现的结构进行布局。
+7. 网页展示在屏幕上（这一步被称为着色）。
+
+<img src='https://media.prod.mdn.mozit.cloud/attachments/2015/10/14/11781/ab96f980498d7c46fe26f6df06b9acfc/rendering.svg'>
+
+## about DOM
+
+一个DOM有一个树形结构，标记语言中的每一个元素、属性以及每一段文字都对应着结构树中的一个节点（Node/DOM或DOM node）。
+
+节点由节点本身和其他DOM节点的关系定义，有些节点有父节点，有些节点有兄弟节点（同级节点）。
+
+```HTML
+<p>
+  Let's use:
+  <span>Cascading</span>
+  <span>Style</span>
+  <span>Sheets</span>
+</p>
+```
+
+上面的HTML代码对应的DOM树
+
+```
+P
+├─ "Let's use:"
+├─ SPAN
+|  └─ "Cascading"
+├─ SPAN
+|  └─ "Style"
+└─ SPAN
+   └─ "Sheets"
 ```
