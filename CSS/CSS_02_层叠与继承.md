@@ -22,7 +22,7 @@ Stylesheets cascade（样式表层叠） — 简单的说，css规则的顺序�
 .main-heading { 
     color: red; 
 }
-        
+
 h1 { 
     color: blue; 
 }
@@ -120,7 +120,7 @@ blockquote {
     background-color: red;
     border: 2px solid green;
 }
-        
+
 .fix-this {
     all: unset;
 }
@@ -150,7 +150,6 @@ blockquote {
 - 百位： 选择器中包含ID选择器则该位得一分。
 - 十位： 选择器中包含类选择器、属性选择器或者伪类则该位得一分。
 - 个位：选择器中包含元素、伪元素选择器则该位得一分。
-
 
 <table>
 <tr>
@@ -211,4 +210,3 @@ blockquote {
 3. 作者样式表中的常规声明(这些是我们web开发人员设置的样式)。
 4. 作者样式表中的`!important`声明
 5. 用户样式表中的`!important` 声明
-
