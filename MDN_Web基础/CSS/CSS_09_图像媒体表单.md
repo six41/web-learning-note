@@ -1,19 +1,3 @@
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  box-sizing: border-box;
-  padding: 0; margin: 0;
-}
-
-textarea {
-  overflow: auto;
-} 都放在一起“重置”](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements#%E5%B0%86%E4%B8%80%E5%88%87%E9%83%BD%E6%94%BE%E5%9C%A8%E4%B8%80%E8%B5%B7%E2%80%9C%E9%87%8D%E7%BD%AE%E2%80%9D "Permalink to 将一切都放在一起“重置”")
-
-### [将一切将一切都放在一起“重置”
-
 # 图像、媒体和表单
 
 ## 替换元素
@@ -134,7 +118,7 @@ textarea {
 }
 ```
 
-### 将一切将一切都放在一起“重置”
+### 将一切都放在一起“重置”
 
 作为最后一步，我们可以将上面讨论过的各式属性包起来，成为以下的“表单重置”，以提供一个统一的在其上继续进行工作的地基，这包含了前三节提到的所有东西：
 
@@ -143,10 +127,50 @@ button,input,select,textarea {
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  padding: 0; margin: 0;
+  padding: 0; 
+  margin: 0;
 }
 
 textarea {
   overflow: auto;
 } 
 ```
+
+## Example 样式化表格
+
+### 间距和布局
+
+```css
+/* spacing */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+}
+```
+
+###  `table-layout: fixed;`
+
+通常情况下，表列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 table-layout: fixed，您可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。这就是为什么我们使用了thead th:nth-child(n) 选择了四个不同的标题(:nth-child)选择器（“选择第n个子元素，它是一个顺序排列的<th>元素，且其父元素是<thead>元素”）并给定了它们的百分比宽度。
