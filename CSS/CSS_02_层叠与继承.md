@@ -167,7 +167,7 @@ blockquote {
 <td>0</td>
 <td>1</td>
 <td>0001</td>
-</tr>
+</t>
 <tr>
 <td>h1 + p::first-letter</td>
 <td>0</td>
@@ -201,6 +201,10 @@ blockquote {
 <td>1000</td>
 </tr>
 </table>
+
+
+
+
 ### CSS位置的影响
 
 相互冲突的声明将按以下顺序适用，后一种声明将覆盖前一种声明：
