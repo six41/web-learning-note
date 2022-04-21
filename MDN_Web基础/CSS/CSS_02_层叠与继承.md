@@ -22,7 +22,7 @@ Stylesheets cascade（样式表层叠） — 简单的说，css规则的顺序�
 .main-heading { 
     color: red; 
 }
-        
+
 h1 { 
     color: blue; 
 }
@@ -120,7 +120,7 @@ blockquote {
     background-color: red;
     border: 2px solid green;
 }
-        
+
 .fix-this {
     all: unset;
 }
@@ -151,7 +151,6 @@ blockquote {
 - 十位： 选择器中包含类选择器、属性选择器或者伪类则该位得一分。
 - 个位：选择器中包含元素、伪元素选择器则该位得一分。
 
-
 <table>
 <tr>
 <td>选择器</td>
@@ -168,7 +167,7 @@ blockquote {
 <td>0</td>
 <td>1</td>
 <td>0001</td>
-</tr>
+</t>
 <tr>
 <td>h1 + p::first-letter</td>
 <td>0</td>
@@ -202,6 +201,10 @@ blockquote {
 <td>1000</td>
 </tr>
 </table>
+
+
+
+
 ### CSS位置的影响
 
 相互冲突的声明将按以下顺序适用，后一种声明将覆盖前一种声明：
@@ -211,4 +214,3 @@ blockquote {
 3. 作者样式表中的常规声明(这些是我们web开发人员设置的样式)。
 4. 作者样式表中的`!important`声明
 5. 用户样式表中的`!important` 声明
-
