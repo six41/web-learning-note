@@ -138,6 +138,53 @@ textarea {
 
 ## Example 样式化表格
 
+### 一个典型的HTML表格
+
+```html
+<table>
+  <caption>A summary of the UK's most famous punk bands</caption>
+  <thead>
+    <tr>
+      <th scope="col">Band</th>
+      <th scope="col">Year formed</th>
+      <th scope="col">No. of Albums</th>
+      <th scope="col">Most famous song</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Buzzcocks</th>
+      <td>1976</td>
+      <td>9</td>
+      <td>Ever fallen in love (with someone you shouldn't've)</td>
+    </tr>
+    <tr>
+      <th scope="row">The Clash</th>
+      <td>1976</td>
+      <td>6</td>
+      <td>London Calling</td>
+    </tr>
+
+      ... some rows removed for brevity
+
+    <tr>
+      <th scope="row">The Stranglers</th>
+      <td>1974</td>
+      <td>17</td>
+      <td>No More Heroes</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Total albums</th>
+      <td colspan="2">77</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+---
+
 ### 间距和布局
 
 ```css
@@ -171,6 +218,105 @@ th, td {
 }
 ```
 
-###  `table-layout: fixed;`
+### `table-layout: fixed;`
 
 通常情况下，表列的尺寸会根据所包含的内容大小而变化，这会产生一些奇怪的结果。通过 table-layout: fixed，您可以根据列标题的宽度来规定列的宽度，然后适当地处理它们的内容。这就是为什么我们使用了thead th:nth-child(n) 选择了四个不同的标题(:nth-child)选择器（“选择第n个子元素，它是一个顺序排列的<th>元素，且其父元素是<thead>元素”）并给定了它们的百分比宽度。
+
+### `thead th:nth-child(*n*)`
+
+使用了`thead th:nth-child(*n*)` 选择了四个不同的标题`:nth-child`选择器（“选择第n个子元素，它是一个顺序排列的`<th>`元素，且其父元素是`<thead>`并给定了它们的百分比宽度。整个列宽度与列标题的宽度是一样的，这是一种很好的设定表列尺寸的方式。
+
+### `border-collapse`
+
+一个`border-collapse`属性的`collapse`值对于任何表样式的工作来说都是一个标准的最佳实践。默认情况下，当您在表元素上设置边框时，它们之间将会有间隔，如下图所示：
+
+一个[``border-collapse`属性的`collapse`值对于任何表样式的工作来说都是一个标准的最佳实践。默认情况下，当您在表元素上设置边框时，它们之间将会有间隔，如下图所示：![](https://mdn.mozillademos.org/files/13068/no-border-collapse.png)
+
+使用 `border-collapse: collapse;` ，让边框合为一条.
+
+---
+
+## 简单排版
+
+```css
+/* typography */
+
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+thead th, tfoot th {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+```
+
+## 图形和颜色
+
+```css
+thead, tfoot {
+ background: url(leopardskin.jpg);
+ color: white;
+ text-shadow: 1px 1px 1px black;
+}
+thead th, tfoot th, tfoot td {
+ background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+ border: 3px solid purple;
+}
+```
+
+## 斑马条纹
+
+`:nth-child`选择器用于选择特定的子元素。它也可以用一个公式作为参数，来选择一个元素序列.
+
+在代码中使用了`odd`和`even`的关键字，在这里，我们给奇数行和偶数行不同的(醒目的)颜色。
+
+```css
+tbody tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+
+tbody tr {
+  background-image: url(noise.png);
+}
+
+table {
+  background-color: #ff33cc;
+}
+```
+
+![](https://mdn.mozillademos.org/files/13074/table-with-color.png)
+
+## 样式化标题
+
+```css
+caption {
+  font-family: 'Rock Salt', cursive;
+  padding: 20px;
+  font-style: italic;
+  caption-side: bottom;
+  /*标题会被放在底部*/
+  color: #666;
+  text-align: right;
+  letter-spacing: 1px;
+}
+```
