@@ -1,5 +1,7 @@
 # 格式化文本
 
+# 样式化文字
+
 用于样式文本的 CSS 属性通常可以分为两类
 
 - **字体样式**: 作用于字体的属性，会直接应用到文本中，比如使用哪种字体，字体的大小是怎样的，字体是粗体还是斜体，等等。
@@ -178,4 +180,88 @@ text-shadow: -1px -1px 1px #aaa,
 
 ```css
 line-height: 1.5;
+```
+
+### 字母及单词间距
+
+`letter-spacing` 和 `word-spacing` 属性允许设置文本中的字母与字母之间的间距、或是单词与单词之间的间距。
+
+```css
+/*将该效果设置在第一行*/
+p::first-line {
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+```
+
+---
+
+## 其他属性
+
+### Font 样式:
+
+- font-variant: 在小型大写字母和普通文本选项之间切换。
+
+- font-kerning: 开启或关闭字体间距选项。
+
+- font-feature-settings: 开启或关闭不同的 OpenType 字体特性。
+
+- font-variant-alternates: 控制给定的自定义字体的替代字形的使用。
+
+- font-variant-caps: 控制大写字母替代字形的使用。
+
+- font-variant-east-asian (en-US): 控制东亚文字替代字形的使用, 像日语和汉语。
+
+- font-variant-ligatures: 控制文本中使用的连写和上下文形式。
+
+- font-variant-numeric: 控制数字，分式和序标的替代字形的使用。
+
+- font-variant-position: 控制位于上标或下标处，字号更小的替代字形的使用。
+
+- font-size-adjust: 独立于字体的实际大小尺寸，调整其可视大小尺寸。
+
+- font-stretch: 在给定字体的可选拉伸版本中切换。
+
+- text-underline-position: 指定下划线的排版位置，通过使用 text-decoration-line 属
+
+- 的underline 值。
+
+- text-rendering: 尝试执行一些文本渲染优化。
+
+### 文本布局样式：
+
+- text-indent: 指定文本内容的第一行前面应该留出多少的水平空间。
+
+- text-overflow: 定义如何向用户表示存在被隐藏的溢出内容。
+
+- white-space: 定义如何处理元素内部的空白和换行。
+
+- word-break: 指定是否能在单词内部换行。
+
+- direction: 定义文本的方向 (这取决于语言，并且通常最好让HTML来处理这部分，因为它是和文本内容相关联的。)
+
+- hyphens: 为支持的语言开启或关闭连字符。
+
+- line-break: 对东亚语言采用更强或更弱的换行规则。
+
+- text-align-last: 定义一个块或行的最后一行，恰好位于一个强制换行前时，如何对齐。
+
+- text-orientation: 定义行内文本的方向。
+
+- word-wrap: 指定浏览器是否可以在单词内换行以避免超出范围。
+
+- writing-mode: 定义文本行布局为水平还是垂直，以及后继文本流的方向。
+
+## Font简写
+
+许多字体的属性也可以通过 font 的简写方式来设置 . 这些是按照以下顺序来写的： ` font-style`, `font-variant`, `font-weight`, `font-stretch`, `font-size`, `line-height`, and `font-family`.
+
+如果你想要使用 `font` 的简写形式，在所有这些属性中，只有 `font-size` 和 `font-family` 是一定要指定的。
+
+`font-size` 和 `line-height` 属性之间必须放一个正斜杠。
+
+一个完整的例子如下所示：
+
+```css
+font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
 ```
