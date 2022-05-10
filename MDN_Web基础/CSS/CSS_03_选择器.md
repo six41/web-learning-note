@@ -83,3 +83,9 @@ article > p { }
 | [子代选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Child_combinator)              | `article > p`       | [子代选择器](https://developer.mozilla.org/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Child_combinator)                              |
 | [相邻兄弟选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            | [相邻兄弟](https://developer.mozilla.org/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Adjacent_sibling)                               |
 | [通用兄弟选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/General_sibling_combinator)  | `h1 ~ p`            | [通用兄弟](https://developer.mozilla.org/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#General_sibling)                                |
+
+> 后代选择器和子选择器的区别
+> 
+> 后代选择所有后代，`article p`能选中所有`<article>`后代中的所有`<p>`
+> 
+> 子选择器只选择子元素，不会选中所有后代

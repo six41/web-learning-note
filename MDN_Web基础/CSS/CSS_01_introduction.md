@@ -21,7 +21,6 @@ h1 {
 
 CSS 由许多<em>模块(modules)</em> 构成
 
-
 ## 链接CSS和HTML
 
 为了把 styles.css 和 index.html 连接起来，可以在 HTML 文档中，&lt;head&gt; 语句模块里面加上下面的代码：
@@ -192,6 +191,7 @@ body h1 + p .special {
 ```
 
 > **不要这么做！**
+> 
 > 1. 难以阅读
 > 2. 将文档结构和文档表现混合
 
@@ -246,7 +246,6 @@ p {
 支持在CSS中进行简单的计算
 
 ```CSS
-
 .outer {
   border: 5px solid black;
 }
@@ -254,9 +253,9 @@ p {
 .box {
   padding: 10px;
   width: calc(90% - 30px);
-  
+
   /*要求box的宽度是框宽的的90%再减去30像素*/
-  
+
   background-color: rebeccapurple;
   color: white;
 }

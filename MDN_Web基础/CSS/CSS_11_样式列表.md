@@ -110,6 +110,7 @@ ol {
   list-style-type: upper-roman;
 }
 ```
+
 <img src = "https://mdn.mozillademos.org/files/12962/outer-bullets.png">
 
 ### <a href= "https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Styling_lists#%E9%A1%B9%E7%9B%AE%E7%AC%A6%E5%8F%B7%E4%BD%8D%E7%BD%AE">项目符号位置</a>
@@ -122,6 +123,7 @@ ol {
   list-style-position: inside;
 }
 ```
+
 默认值为 outside，这使项目符号位于列表项之外。
 
 如果值设置为 inside，项目条目则位于行内。
@@ -155,14 +157,13 @@ ul li {
 
 - 将 &lt;ul&gt; 的 padding-left 从默认的 40px设置为 20px，然后在列表项上设置相同的数值。 这就是说，整个列表项仍然排列在列表中，但是列表项产生了一些用于背景图像的填充。 如果我们没有设置填充，背景图像将与列表项文本重叠，这看起来会很乱。
 - 将 list-style-type 设置为none，以便默认情况下不会显示项目符号。 我们将使用 background 属性来代替项目符号。
-为每个无序列表项插入项目符号，其相应的属性如下：
+  为每个无序列表项插入项目符号，其相应的属性如下：
 - background-image: 充当项目符号的图片文件的参考路径
 - background-position: 这定义了所选元素背景中的图像将出现在哪里 - 在我们的示例中设置 0 0，这意味着项目符号将出现在每个列表项的最左上侧。
 - background-size: 设置背景图片的大小。 理想条件下，我们想要项目符号与列表项的大小相同（比列表项稍大或稍小亦可）。 我们使用的尺寸为1.6rem（16px），它非常吻合我们为项目符号设置的 20px  的填充， 16px 加上 4px 的空格间距，可以使项目符号和列表项文本效果更好。
 - background-repeat：默认条件下，背景图片不断复制直到填满整个背景空间，在我们的例子中，背景图片只需复制一次，所以我们设置值为 no-repeat。
 
 <img src = "https://mdn.mozillademos.org/files/12956/image-bullets.png">
-
 
 ## list-style 速记
 
@@ -190,7 +191,7 @@ ul {
 
 <strong>在有序列表上进行不同的计数方式。</strong>
 
-### `start` 
+### `start`
 
 start 属性允许从1 以外的数字开始计数。
 
