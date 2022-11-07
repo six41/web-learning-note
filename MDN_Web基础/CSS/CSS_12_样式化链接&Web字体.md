@@ -137,7 +137,9 @@ a:active {
 - 第二条规则删除了 [`<ul>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul) 元素的默认的 [`padding`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding)，然后设置了它的宽度是外部容器  [`<body>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/body) (在这次条件下) 的 100% 。
 - [`<li>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/li) 元素通常默认是块元素 ，意味着它们各自会占用一行。在这个例子中，创建了一组水平列表的链接，所以在第三条规则中，设置了属性为 inline，这会导致列表中的每项内容都会一起出现在同一行，它们现在表现得就像内联元素。
 - 第四条规则，主要是 [`<a>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a) 元素的样式，这里比较复杂; 让我们一步一步来看：
-  - 和前面的例子一样，我们首先关掉了 [`text-decoration`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration) 和 [`outline`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline)。
+  - 和前面的例子一样，首先关掉了 [`text-decoration`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration) 和 [`outline`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline)。
   - 接着，设置 [`display`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display) 为 `inline-block` ，[`<a>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a) 元素默认为内联元素，而且不希望它们像值为 `block` 时一样，线条超出自己的内容，我们确实想要控制它们的大小`inline-block` 允许我们这样做。
   - 接着是尺寸的设置! 要填满整个 [`<ul>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul) 的宽度，为按钮之间留一些间距 (margin)  (但不是右边边缘的间距)。按钮的大小应该一样。为了做到这一点，设置 [`width`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width) 为 19.5%，然后 [`margin-right`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-right) 为 0.625%. 所有宽度加起来是 100.625%, 这样会让最后一个按钮溢出 `<ul>` ，然后显示到下一行中。但是，我们使用了下一条规则让它恢复到了 100%，这条规则选中了列表中的最后一个 `<a>`元素，然后删除了它的间距 (margin)。完成!
   - 最后三条声明就比较简单了，主要是为链接各个状态添加了颜色。居中了每个链接中的文本，设置 [`line-height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height) 为 3， 让按钮有一些高度 (这也具有垂直居中文本的优点)，并设置文本的颜色为黑色。
+
+# web字体
