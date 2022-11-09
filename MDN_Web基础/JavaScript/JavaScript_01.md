@@ -23,9 +23,9 @@ function updateName() {
 
 而服务器端代码在服务器上运行，接着运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、ASP.NET 以及...... JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境.
 
-### async “异步”属性
+### async 异步属性
 
-它告知浏览器在遇到 `script` 元素时不要中断后续 HTML 内容的加载。
+它告知浏览器在遇到 `script` 元素时不要中断后续HTML内容的加载。
 
 ## async 和 defer
 
@@ -44,9 +44,9 @@ function updateName() {
 <script async src="js/script3.js"></script>
 ```
 
-三者的调用顺序是不确定的。jquery.js 可能在 script2 和 script3 之前或之后调用，如果这样，后两个脚本中依赖 jquery 的函数将产生错误，因为脚本运行时 jquery 尚未加载。
+三者的调用顺序是不确定的。`jquery.js`可能在`script2`和`script3`之前或之后调用，如果这样，后两个脚本中依赖`jquery`的函数将产生错误，因为脚本运行时`jquery`尚未加载。
 
-解决这一问题可使用 defer 属性，脚本将按照在页面中出现的顺序加载和运行：
+解决这一问题可使用`defer`属性，脚本将按照在页面中出现的顺序加载和运行：
 
 ```javascript
 <script defer src="js/vendor/jquery.js"></script>
@@ -56,12 +56,12 @@ function updateName() {
 <script defer src="js/script3.js"></script>
 ```
 
-添加 defer 属性的脚本将按照在页面中出现的顺序加载，因此第二个示例可确保 jquery.js 必定加载于 script2.js 和 script3.js 之前，同时 script2.js 必定加载于 script3.js 之前。
+添加 defer 属性的脚本将按照在页面中出现的顺序加载，因此第二个示例可确保`jquery.js`必定加载于`script2.js`和`script3.js`之前，同时`script2.js`必定加载于`script3.js`之前。
 
 ## 脚本调用总结
 
-- 如果脚本无需等待页面解析，且无依赖独立运行，那么应使用 async。
-- 如果脚本需要等待页面解析，且依赖于其它脚本，调用这些脚本时应使用 defer，将关联的脚本按所需顺序置于 HTML 中。
+- 如果脚本无需等待页面解析，且无依赖独立运行，那么应使用`async`。
+- 如果脚本需要等待页面解析，且依赖于其它脚本，调用这些脚本时应使用`defer`，将关联的脚本按所需顺序置于`HTML`中。
 
 ```javascript
 // 函数：创建一个新的段落并添加至 HTML body 底部。
